@@ -14,9 +14,19 @@ The only input is the integer weight of the watermelon (between 1-100).
 Outputs:
 Print YES if the watermelon can be divided into two even numbers, otherwise print NO.
 
+Solution:
+The crux of this problem is understanding and using modulo to get the remainder from a number, its pretty simple.
 """
 def divideMelon():
-    print("melon!")
+    melonWeight = int(input("What is the weight of the melon?"))
+    # If the melon has no remainder when divided by 2.
+    if melonWeight % 2 == 0:
+        # Print Yes
+        print("YES")
+    # If the melon has a remainder
+    else:
+        # Print No
+        print("NO")
 
 def main():
     divideMelon()
