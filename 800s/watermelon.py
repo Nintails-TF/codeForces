@@ -15,12 +15,18 @@ Outputs:
 Print YES if the watermelon can be divided into two even numbers, otherwise print NO.
 
 Solution:
-The crux of this problem is understanding and using modulo to get the remainder from a number, its pretty simple.
+The crux of this problem is understanding and using modulo to get the remainder from a number. This number then
+has to be even.
+
+This is why we have an acception for 2, since when you modulus 2 you will get an even number, but its parts are odd. So
+we can write a rule to exclude it from being accepted.
 """
 def divideMelon():
-    melonWeight = int(input("What is the weight of the melon?"))
-    # If the melon has no remainder when divided by 2.
-    if melonWeight % 2 == 0:
+    # Receiving input for melon weight
+    melonWeight = int(input())
+    melonMod = melonWeight % 2
+    # Firstly, check if the melon has no remainder.
+    if melonMod == 0 and melonWeight != 2:
         # Print Yes
         print("YES")
     # If the melon has a remainder
