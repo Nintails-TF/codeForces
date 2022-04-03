@@ -18,7 +18,7 @@ Solution:
 The crux of this problem is understanding and using modulo to get the remainder from a number. This number then
 has to be even.
 
-This is why we have an acception for 2, since when you modulus 2 you will get an even number, but its parts are odd. So
+This is why we have an exception for 2, since when you modulus 2 you will get an even number, but its parts are odd. So
 we can write a rule to exclude it from being accepted.
 """
 def divideMelon():
