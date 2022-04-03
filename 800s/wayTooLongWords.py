@@ -34,7 +34,7 @@ def wordShorten(lines):
             firstChar = word[0]
             lastChar = word[-1]
             # count the number of characters between them
-            wordDiff = len(word[1:-2])
+            wordDiff = len(word[1:-1])
             # Concatenate them together
             word = firstChar + str(wordDiff) + lastChar
             # Display word
