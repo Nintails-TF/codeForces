@@ -14,6 +14,30 @@ Output: An integer value of the number of problems the friends will submit.
 
 Solution: This problem doesn't seem too demanding. We just read in each line and loop for n, count if at least two 1s occur
 in the line, if they do then increment a counter by one, otherwise do nothing.
-
-
 """
+def problemCalc(problems):
+    # Storing a variable for the number of problems the group will attempt.
+    numOfProblems = 0
+    # The number of team members who have a solution
+    teamConfidence = 0
+    # Looping for the number of problems.
+    for i in range(problems):
+        # Receiving the 3 numbers as a string
+        teamInput = str(input())
+        # Check if the string has at least two 1s.
+        if "1" in teamInput:
+            print("aaa")
+            teamConfidence += 1
+            if teamConfidence >= 2:
+                numOfProblems += 1
+    print(numOfProblems)
+
+    
+
+def main():
+    # Getting the number of times to loop for.
+    numberOfProblems= int(input())
+    problemCalc(numberOfProblems)
+
+if __name__ == "__main__":
+    main()
