@@ -18,19 +18,15 @@ in the line, if they do then increment a counter by one, otherwise do nothing.
 def problemCalc(problems):
     # Storing a variable for the number of problems the group will attempt.
     numOfProblems = 0
-    # The number of team members who have a solution
-    teamConfidence = 0
     # Looping for the number of problems.
     for i in range(problems):
         # Receiving the 3 numbers as a string
         teamInput = str(input())
         # Check if the string has at least two 1s.
-        if "1" in teamInput:
-            print("aaa")
-            teamConfidence += 1
-            if teamConfidence >= 2:
-                numOfProblems += 1
+        if teamInput.count("1") >= 2:
+            numOfProblems += 1
     print(numOfProblems)
+        
 
     
 
