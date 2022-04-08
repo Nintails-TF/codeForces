@@ -22,6 +22,8 @@ Failing the first submission we realise that when faced with the following input
 
 We decline all contestants rather than accepting all of them. So what we can do is count the number of similar scores and then
 check if they are equal to the number of parcipants, if so we allow everyone.
+
+Ignore the shit above its retarded, I didn't check for scores properly, I checked using N rather than the score AT n.
 """
 
 def nextRound(numOfParcipants, minScore):
@@ -31,14 +33,9 @@ def nextRound(numOfParcipants, minScore):
     score = str(input())
     # Getting the scores as an array.
     scoreArr = score.split(" ")
+    minScore = int(scoreArr[minScore-1])
     for i in range(numOfParcipants):
-        # We need to check if all contestants have the same score
-        if scoreArr.count(score[i]) == numOfParcipants and int(score[i]) > 0:
-            # Let everyone pass
-            passingContestants = numOfParcipants
-            # Leave the loop instantly.
-            break
-        if int(scoreArr[i]) > minScore:
+        if int(scoreArr[i]) >= minScore and int(scoreArr[i]) > 0:
             # Count those who pass
             passingContestants += 1
     # Displaying the number of people who pass.
