@@ -17,3 +17,29 @@ check if the particpant has a score greater than n, if so they move to the next 
 
 """
 
+def nextRound(numOfParcipants, minScore):
+    # Defining initial variables
+    scoreArr = []
+    passingContestants = 0
+    score = str(input())
+    # Getting the scores as an array.
+    scoreArr = score.split(" ")
+    for i in range(numOfParcipants):
+        if int(scoreArr[i]) > minScore:
+            # Count those who pass
+            passingContestants += 1
+    # Displaying the number of people who pass.
+    print(passingContestants)
+
+
+def main():
+    # Getting the raw input as an array
+    nk = input()
+    nkArr = nk.split(" ")
+    # Getting the data into variables
+    numOfParticipants = nkArr[0]
+    minScore = nkArr[1]
+    nextRound(int(numOfParticipants), int(minScore))
+
+if __name__ == "__main__":
+    main()
