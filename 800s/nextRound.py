@@ -25,7 +25,7 @@ def nextRound(numOfParcipants, minScore):
     # Getting the scores as an array.
     scoreArr = score.split(" ")
     for i in range(numOfParcipants):
-        if int(scoreArr[i]) > minScore:
+        if int(scoreArr[i]) >= minScore:
             # Count those who pass
             passingContestants += 1
     # Displaying the number of people who pass.
