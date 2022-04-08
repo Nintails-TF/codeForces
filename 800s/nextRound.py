@@ -33,7 +33,7 @@ def nextRound(numOfParcipants, minScore):
     scoreArr = score.split(" ")
     for i in range(numOfParcipants):
         # We need to check if all contestants have the same score
-        if scoreArr.count(score[i]) == numOfParcipants:
+        if scoreArr.count(score[i]) == numOfParcipants and int(score[i]) > 0:
             # Let everyone pass
             passingContestants = numOfParcipants
             # Leave the loop instantly.
