@@ -15,6 +15,5 @@ Solution:
 We can see that k = number of participants, n = the minimum score needed to progress. What we want to do is loop for k, and then
 check if the particpant has a score greater than n, if so they move to the next round otherwise we discard them.
 
-
-
 """
+
