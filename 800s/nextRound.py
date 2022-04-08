@@ -15,6 +15,13 @@ Solution:
 We can see that k = number of participants, n = the minimum score needed to progress. What we want to do is loop for k, and then
 check if the particpant has a score greater than n, if so they move to the next round otherwise we discard them.
 
+Failing the first submission we realise that when faced with the following input:
+
+5 1
+1 1 1 1 1
+
+We decline all contestants rather than accepting all of them. So what we can do is count the number of similar scores and then
+check if they are equal to the number of parcipants, if so we allow everyone.
 """
 
 def nextRound(numOfParcipants, minScore):
@@ -25,7 +32,13 @@ def nextRound(numOfParcipants, minScore):
     # Getting the scores as an array.
     scoreArr = score.split(" ")
     for i in range(numOfParcipants):
-        if int(scoreArr[i]) >= minScore:
+        # We need to check if all contestants have the same score
+        if scoreArr.count(score[i]) == numOfParcipants:
+            # Let everyone pass
+            passingContestants = numOfParcipants
+            # Leave the loop instantly.
+            break
+        if int(scoreArr[i]) > minScore:
             # Count those who pass
             passingContestants += 1
     # Displaying the number of people who pass.
