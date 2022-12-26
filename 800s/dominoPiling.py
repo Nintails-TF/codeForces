@@ -18,3 +18,16 @@ Output:
 Output one number - the maximal number of dominoes, which can be placed.
 """
 
+
+
+
+
+def main():
+    n, m = map(int, input().split())
+    s = n*m
+    print(s//2)
+
+
+if __name__ == "__main__":
+    main()
+
